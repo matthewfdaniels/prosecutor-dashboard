@@ -2,7 +2,7 @@
   "charge-types" : {
     "label" : "Charges Types",
     "type" : "bar",
-    "data": "filtered-def.csv",
+    "data": "",
     "x" : "DFDISPDATE_FILTERED",
     "xLabel": {
       "en" : "Disposition Year",
@@ -18,7 +18,7 @@
   "sentencing" : {
     "label" : "Sentence Type",
     "type" : "line",
-    "data": "filtered-charges-sentences.csv",
+    "data": "sentencing-data.json",
     "x" : "CGDISPDATE_FILTERED",
     "xLabel": {
       "en" : "Disposition Year",

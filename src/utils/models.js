@@ -18,16 +18,16 @@ var models = {
   //will sort data so it will displayed on x, y axis
   //
   getDataBy(dataFile, x, y){
-    // var jsonData = require.context('../../assets/data/', false, /\.json$/)
-    // var loaded = jsonData('./' + dataFile)
+    var jsonData = require.context('../../assets/data/', false, /\.json$/)
+    var loaded = jsonData('./' + dataFile)
 
-    // var data = JSON.parse(JSON.stringify(loaded));
+    var data = JSON.parse(JSON.stringify(loaded));
 
     //var combined = require('../../assets/data/real/filtered-charges-sentences.csv')
     //var combined = require('../../assets/data/real/filtered-def.csv')
     //var data = require('../../assets/data/real/filtered-charges-sentences.csv')
-    console.log("---loading from data file: " + dataFile + "---");
-    var data = require('../../assets/data/real/' + dataFile);
+    // console.log("---loading from data file: " + dataFile + "---");
+    // var data = require('../../assets/data/real/' + dataFile);
 
 
     var sorted = {}

@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import Models from "../../utils/models.js"
+// import Models from "../../utils/models.js"
 import domtoimage from 'dom-to-image-more';
 
 export default {
@@ -42,12 +42,12 @@ export default {
         this.$emit('capture', 'imageName')
       }
       else{
-        var data = Models.getCurrentModel();
-        var dataStr = "data:text/" + this.currentFileType + ";charset=utf-8," + encodeURIComponent(JSON.stringify(data));
-        var dlAnchorElem = document.getElementById('downloadAnchorElem');
-        dlAnchorElem.setAttribute("href",     dataStr     );
-        dlAnchorElem.setAttribute("download", "data." + this.currentFileType);
-        dlAnchorElem.click();
+        // var data = Models.getCurrentModel();
+        // var dataStr = "data:text/" + this.currentFileType + ";charset=utf-8," + encodeURIComponent(JSON.stringify(data));
+        // var dlAnchorElem = document.getElementById('downloadAnchorElem');
+        // dlAnchorElem.setAttribute("href",     dataStr     );
+        // dlAnchorElem.setAttribute("download", "data." + this.currentFileType);
+        // dlAnchorElem.click();
       }
     }
 

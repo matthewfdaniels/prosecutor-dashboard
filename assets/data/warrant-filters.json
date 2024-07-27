@@ -2,7 +2,7 @@
   "race" : {
     "label" : "Race",
     "type" : "bar",
-    "data": "filtered-def.csv",
+    "data": "",
     "x" : "DFDISPDATE_FILTERED",
     "xLabel": {
       "en" : "Year of Disposition",
@@ -19,7 +19,7 @@
   {
     "label" : "Location",
     "type" : "map",
-    "data": "filtered-def.csv",
+    "data": "warrant-data.json",
     "x" : "",
     "xLabel": {
       "en" : "",

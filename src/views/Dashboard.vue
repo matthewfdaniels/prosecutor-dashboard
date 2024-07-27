@@ -43,7 +43,7 @@ import Details from "@/components/details/Details"
 import Legend from "@/components/Legend"
 import Map from "@/components/Map"
 
-import Models from "../utils/models.js"
+// import Models from "../utils/models.js"
 import topicsJson from "../../assets/topics.json"
 import filterJson from "../../assets/data/warrant-filters.json"
 import Asset from "@/utils/assets"
@@ -133,10 +133,10 @@ export default {
       this.sort();
     },
     loadFilters(){
-      this.filters = Models.loadFilterModel(this.currentTopic);
-      var currentFilterKey = Object.keys(this.filters)[0]
-      this.currentFilter = this.filters[currentFilterKey];
-      console.log("currentFilter: " + this.currentFilter);
+      // this.filters = Models.loadFilterModel(this.currentTopic);
+      // var currentFilterKey = Object.keys(this.filters)[0]
+      // this.currentFilter = this.filters[currentFilterKey];
+      // console.log("currentFilter: " + this.currentFilter);
     },
     updateFilter(filter){
       this.adjustedDate = false;
@@ -147,18 +147,18 @@ export default {
       console.log(dateModel);
       if (this.adjustedDate){
         if (dateModel.start && dateModel.end){
-          var currentData = Models.getByDate(dateModel);
-          this.chartData = [];
+          // var currentData = Models.getByDate(dateModel);
+          // this.chartData = [];
 
-          setTimeout(() => {
-            var chart = [];
-            var index = 0;
-            for (var type in currentData){
-              chart.push( {"data" : currentData[type], "borderColor": this.colors[index]})
-              index++;
-            }
-            this.chartData = chart;
-          }, 5);
+          // setTimeout(() => {
+          //   var chart = [];
+          //   var index = 0;
+          //   for (var type in currentData){
+          //     chart.push( {"data" : currentData[type], "borderColor": this.colors[index]})
+          //     index++;
+          //   }
+          //   this.chartData = chart;
+          // }, 5);
 
         }
       }
@@ -176,29 +176,29 @@ export default {
       }
     },
     sort(){
-      this.loadingData = true;
-      var dataFile = this.currentFilter.data;
+      // this.loadingData = true;
+      // var dataFile = this.currentFilter.data;
 
-      var x = this.currentFilter.x;
-      var y = this.currentFilter.y;
+      // var x = this.currentFilter.x;
+      // var y = this.currentFilter.y;
 
-      console.log("sorting by: " + x + ", " + y)
-      var currentData = Models.getDataBy(dataFile, x, y);
+      // console.log("sorting by: " + x + ", " + y)
+      // var currentData = Models.getDataBy(dataFile, x, y);
 
-      var chart = [];
-      var legend = [];
-      var index = 0;
-      for (var type in currentData){
-        chart.push( {"data" : currentData[type], "borderColor": this.colors[index], "backgroundColor": this.colors[index]})
-        legend.push({"label" : type, "color" : this.colors[index]})
-        index++;
-      }
+      // var chart = [];
+      // var legend = [];
+      // var index = 0;
+      // for (var type in currentData){
+      //   chart.push( {"data" : currentData[type], "borderColor": this.colors[index], "backgroundColor": this.colors[index]})
+      //   legend.push({"label" : type, "color" : this.colors[index]})
+      //   index++;
+      // }
 
-      this.chartData = chart;
-      this.legendData = legend;
+      // this.chartData = chart;
+      // this.legendData = legend;
 
-      console.log("display type: " + this.currentType);
-      this.loadingData = false;
+      // console.log("display type: " + this.currentType);
+      // this.loadingData = false;
 
       //console.log(this.chartData);
     },
